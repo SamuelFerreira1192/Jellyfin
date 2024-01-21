@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Configuration\m3u_main.html" />
+    <None Remove="Configuration\m3u_main.js" />
+    <None Remove="Configuration\Web\m3u_channels.html" />
+    <None Remove="Configuration\Web\m3u_channels.js" />
+    <None Remove="Configuration\Web\m3u_playlists.html" />
+    <None Remove="Configuration\Web\m3u_playlists.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\Web\m3u_channels.html" />
+    <EmbeddedResource Include="Configuration\Web\m3u_channels.js" />
+    <EmbeddedResource Include="Configuration\Web\m3u_main.html" />
+    <EmbeddedResource Include="Configuration\Web\m3u_main.js" />
+    <EmbeddedResource Include="Configuration\Web\m3u_playlists.html" />
+    <EmbeddedResource Include="Configuration\Web\m3u_playlists.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jellyfin.Controller" Version="10.6.0" />
+    <PackageReference Include="Jellyfin.Model" Version="10.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>
